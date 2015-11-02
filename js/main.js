@@ -1,16 +1,8 @@
 $(function() {
-    "use strict";
-
-    /* ==========================================================================
-   Sub Form   
-   ========================================================================== */
-
-
 
     $('#mc-form').ajaxChimp({
         language: 'cm',
         url: 'http://csmthemes.us3.list-manage.com/subscribe/post?u=9666c25a337f497687875a388&id=5b881a50fb'
-            //http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
     });
 
 
@@ -56,36 +48,6 @@ $(function() {
         offset: 30
     });
 
-    /* ==========================================================================
-   litebox
-   ========================================================================== */
-
-    $('.litebox-hero, .litebox-tour').magnificPopup({
-        type: 'iframe'
-    });
-
-
-    /* ==========================================================================
-       Number animation
-       ========================================================================== */
-
-
-    $('.welcome-message').waypoint(function() {
-
-        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-
-        $('.total-number-1').animateNumber({
-            number: 50, //change value here
-            numberStep: comma_separator_number_step
-        }, 6000);
-
-    }, {
-        offset: '80%'
-
-    });
-
-
-
 
     /* ==========================================================================
    Feature image absolute position height fix
@@ -102,20 +64,11 @@ $(function() {
                 $this.height(newHeight);
             });
         };
-
-
         featureImg();
-
-
         $(window).on("resize", function() {
             featureImg();
         });
-
-
     });
-
-
-
 
     /* ==========================================================================
    Smooth scroll
